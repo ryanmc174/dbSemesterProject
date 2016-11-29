@@ -72,7 +72,7 @@
 				out.print("<tr>");
 				//make a column
 				out.print("<td>");
-				out.print(result.getString("Incident Date"));
+				out.print(result.getString("IncidentDate"));
 				out.print("</td>");
 				out.print("<td>");
 				out.print(result.getString("State"));

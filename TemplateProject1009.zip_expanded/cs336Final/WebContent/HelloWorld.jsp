@@ -49,15 +49,92 @@ Alternatively, lets type in a bar and a beer and  a price limit.
 	</form>
 <br>
 
-Query based on number killed
+Query based on several factors
 <br>
 	<form method="query" action="query.jsp">
-		<select name="price" size=1>
+		Year<select name="year" size=1>
+			<option value="any">Any</option>
+			<option value="MassShootings_2014">2014</option>
+			<option value="MassShootings_2015">2015</option>
+			<option value="MassShootings_2016">2016</option>
+		</select><br>	
+		Month of Incident<select name="month" size=1>
+			<option value="any">Any</option>
+			<option value="Jan">January</option>
+			<option value="Feb">February</option>
+			<option value="Mar">March</option>
+			<option value="Apr">April</option>
+			<option value="May">May</option>
+			<option value="Jun">June</option>
+			<option value="Jul">July</option>
+			<option value="Aug">August</option>
+			<option value="Sep">September</option>
+			<option value="Oct">October</option>
+			<option value="Nov">November</option>
+			<option value="Dec">December</option>
+		</select><br>
+		State <select name="state" size=1>
+			<option value="any">Any</option>
+			<option value="Alabama">Alabama</option>
+			<option value="Alaska">Alaska</option>
+			<option value="Arizona">Arizona</option>
+			<option value="Arkansas">Arkansas</option>
+			<option value="California">California</option>
+			<option value="Colorado">Colorado</option>
+			<option value="Connecticut">Connecticut</option>
+			<option value="Delaware">Delaware</option>
+			<option value="District Of Columbia">District Of Columbia</option>
+			<option value="Florida">Florida</option>
+			<option value="Georgia">Georgia</option>
+			<option value="Hawaii">Hawaii</option>
+			<option value="Idaho">Idaho</option>
+			<option value="Illinois">Illinois</option>
+			<option value="Indiana">Indiana</option>
+			<option value="Iowa">Iowa</option>
+			<option value="Kansas">Kansas</option>
+			<option value="Kentucky">Kentucky</option>
+			<option value="Louisiana">Louisiana</option>
+			<option value="Maine">Maine</option>
+			<option value="Maryland">Maryland</option>
+			<option value="Massachusetts">Massachusetts</option>
+			<option value="Michigan">Michigan</option>
+			<option value="Minnesota">Minnesota</option>
+			<option value="Mississippi">Mississippi</option>
+			<option value="Missouri">Missouri</option>
+			<option value="Montana">Montana</option>
+			<option value="Nebraska">Nebraska</option>
+			<option value="Nevada">Nevada</option>
+			<option value="New Hampshire">New Hampshire</option>
+			<option value="New Jersey">New Jersey</option>
+			<option value="New Mexico">New Mexico</option>
+			<option value="New York">New York</option>
+			<option value="North Carolina">North Carolina</option>
+			<option value="North Dakota">North Dakota</option>
+			<option value="Ohio">Ohio</option>
+			<option value="Oklahoma">Oklahoma</option>
+			<option value="Oregon">Oregon</option>
+			<option value="Pennsylvania">Pennsylvania</option>
+			<option value="Rhode Island">Rhode Island</option>
+			<option value="South Carolina">South Carolina</option>
+			<option value="South Dakota">South Dakota</option>
+			<option value="Tennessee">Tennessee</option>
+			<option value="Texas">Texas</option>
+			<option value="Utah">Utah</option>
+			<option value="Vermont">Vermont</option>
+			<option value="Virginia">Virginia</option>
+			<option value="Washington">Washington</option>
+			<option value="West Virginia">West Virginia</option>
+			<option value="Wisconsin">Wisconsin</option>
+			<option value="Wyoming">Wyoming</option>
+		</select><br>	
+		Number Killed<select name="killed" size=1>
+			<option value="any">Any</option>
 			<option value="0.0">0 or More</option>
 			<option value="2.0">2 or More</option>
 			<option value="5.0">5 or More</option>
 			<option value="8.0">8 or More</option>
-		</select>&nbsp;<br> <input type="submit" value="submit">
+		</select>
+	<br> <input type="submit" value="submit">
 	</form>
 <br>
 
