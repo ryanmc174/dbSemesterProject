@@ -8,10 +8,40 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Mass Shootings</title>
+<script type="text/javascript" src="js/jQuery.js"></script>
+<script type="text/javascript" src="js/raphael.js"></script>
+<script type="text/javascript" src="js/jquery.usmap.js"></script>
+
 </head>
 <body>
 Mass Shootings in the United States 2014 - 2016 <!-- the usual HTML way -->
-									  
+
+<h5>Results:</h5>
+<div id="clickedState">Click on a State</div>
+<br>
+<div id="map" style="width: 300px; height: 200px;"></div>
+
+<div id="population"> Population:  </div>
+<div id="percentWhite"> White %: </div>
+<div id="percentBlack"> Black %: </div>
+<div id="percentAsian"> Asian %: </div>
+<div id="percentHispanic"> Hispanic %: </div>
+<div id="percentOther"> Other %: </div>
+<div id="numKilled"> Number of Deaths: </div>
+
+<script> 
+$(document).ready(function() {
+    $('#map').usmap({
+    	stateHoverStyles: {fill: 'red'},
+    	click: function(event, data) {
+    		$('#clickedState')
+    		.text('You clicked: '+data.name)
+    	    .parent().effect('highlight', {color: '#C7F464'}, 2000);
+    	}
+    });
+  });
+</script>
+ 								  
 <br>
  <!-- Show html form to i) display something, ii) choose an action via a 
   | radio button -->
@@ -126,14 +156,16 @@ Query based on several factors
 			<option value="West Virginia">West Virginia</option>
 			<option value="Wisconsin">Wisconsin</option>
 			<option value="Wyoming">Wyoming</option>
-		</select><br>	
+		</select>
+		<br>
 		Number Killed<select name="killed" size=1>
 			<option value="any">Any</option>
 			<option value="0.0">0 or More</option>
 			<option value="2.0">2 or More</option>
 			<option value="5.0">5 or More</option>
 			<option value="8.0">8 or More</option>
-		</select>
+		</select>	
+		
 	<br> <input type="submit" value="submit">
 	</form>
 <br>
